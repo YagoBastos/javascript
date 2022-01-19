@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais Tropical</title>
+</head>
+<body>
+    <h1>@Pais tropical</h1>
+    <div>
+        <p>
+            Qual pais você mora? <input type="text" name="pais_user"id="pais_user">
+            <input type="button" value="Pesquisa" onclick="Pes()">
+        </p>
+    </div>
+    <div id="res"></div>
+
+
+    <!---->
+    <script>
+        var pais_user = window.document.getElementById('pais_user')
+        var res = window.document.getElementById('res')
+        function Pes(){
+            res.innerHTML = `<p>Vivendo em ${pais_user.value}</p>`
+            if((pais_user=='brasil')||(pais_user=='Brasil')){
+                res.innerHTML += '<p>Você é Brasileiro</p>' 
+            }
+            else{
+                res.innerHTML += '<p>Você é estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
