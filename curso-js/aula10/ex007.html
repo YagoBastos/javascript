@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #020222;
+        }
+        div#cal{
+            background: white;
+            width: 400px;
+            height: 600px;
+            position: relative;
+            border-radius: 10px;
+            margin: auto;
+        }
+        h1{
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        input{
+            position: relative;
+            margin: auto;
+            width: 100px;
+            height: 25px;
+        }
+        input#bt{
+            background: #02022293;
+            color: white;
+            margin: 10px;
+        }
+        div#per{
+            padding: 20px;
+        }
+        div#res{
+            margin-top: 10px;
+            text-align: center;
+            background: #02022269;
+            width: 400px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cal">
+        <h1>Somando Valores</h1>
+        <div id="per">
+            <input type="number" name="txtn1" id="txtn1"> +
+            <input type="number" name="txtn2" id="txtn2">
+            <input type="button" value="Somar" onclick="Somar()" id="bt">
+        </div>
+        <div id="res">Resultado</div>
+    </div>
+
+    <!----->
+    <script>
+        function Somar() {
+            var txt1 = window.document.getElementById('txtn1')
+            var txt2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var num1 = Number(txt1.value)
+            var num2 = Number(txt2.value)
+            var soma = num1 + num2
+            res.innerHTML = `A soma de ${num1} e ${num2} é igual a: ${soma}`
+        }
+    </script>
+</body>
+</html>
