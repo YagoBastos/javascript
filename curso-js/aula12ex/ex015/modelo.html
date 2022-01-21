@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>Ano de Nascimento:
+                <input type="number" name="ano_txt" id="ano_txt" min="0">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="sexo_rad" id="sexo_rad_mas" checked>
+                <label for="sexo_rad_mas">Masculino</label>
+
+                <input type="radio" name="sexo_rad" id="sexo_rad_fem">
+                <label for="sexo_rad_fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="Verificar()">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <footer>
+        <a href="https://github.com/YagoBastos">
+            <P>&copy;YagoBastos</P>
+        </a>
+    </footer>
+
+    <!---->
+    <script src="script.js"></script>
+</body>
+</html>
